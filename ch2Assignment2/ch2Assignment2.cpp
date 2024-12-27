@@ -35,8 +35,10 @@ int main(void)
 	
 	
 
-	delete zoo;
+	
 }
+
+
 
 Animal* createRandomAnimal()
 {

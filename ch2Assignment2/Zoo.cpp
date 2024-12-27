@@ -10,10 +10,9 @@ Zoo::Zoo()
 Zoo::~Zoo()
 {
 	//동적할당 해제
-	for (int i = 0; i < 10; i++)
-	{
+	
 		delete[] animals;
-	}
+	
 }
 
 void Zoo::addAnimal(Animal* animal)

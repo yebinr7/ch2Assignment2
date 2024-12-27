@@ -11,5 +11,4 @@ Cow::~Cow()
 void Cow::makeSound()
 {
 	std::cout << "Moo" << std::endl;
-
 }
