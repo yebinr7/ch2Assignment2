@@ -27,7 +27,7 @@ int main(void)
 	Zoo* zoo = new Zoo();//동적할당, 동적할당 해제 필요
 	
 	
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 11; i++)
 		zoo->addAnimal(createRandomAnimal());	
 
 
@@ -43,7 +43,14 @@ int main(void)
 Animal* createRandomAnimal()
 {
 	//난수 생성 0,1,2
-	srand(time(0));
+	
+	/*
+	코드에서 srand(time(0));를 함수 내에서 호출하기 때문에 매번 호출될 때마다 난수 시드를 새로 설정합니다. 
+	하지만, 짧은 시간 간격(특히 1초 미만)으로 
+	함수가 여러 번 호출되면 동일한 시드 값이 설정되고 결과적으로 동일한 난수를 생성합니다.
+	*/
+
+	//srand(time(0));
 
 	//rand()로 생성된 난수 사용
 	int randomNum = rand() % 3; //나머지 0,1,2 밖에 안생긴다.
